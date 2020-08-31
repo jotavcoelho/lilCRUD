@@ -3,3 +3,5 @@ node_modules
 .vscode
 
 nodemon.json
+
+*/config/auth.js
