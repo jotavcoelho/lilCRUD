@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "J. Vitor Coelho <jvcoelho.mail@gmail.com>",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js",
     "test": "jest"
   },
