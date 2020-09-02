@@ -11,7 +11,7 @@ class UserController {
 
 		const { name, email } = await User.create(req.body);
 
-		return res.json({ name, email});
+		return res.json({ name, email });
 	}
 
 	async update(req, res) {
@@ -31,7 +31,7 @@ class UserController {
 		if(oldPassword && !(await user.checkPassword(oldPassword))) 
 			return res.status(401).json({ error: "Old password doesn't match "});
 
-		const { id, name } = user.update(req.body);
+		const { id, name } = await user.update(req.body);
 
 		return res.json({
 			id, name, email

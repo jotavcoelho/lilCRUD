@@ -1,5 +1,6 @@
-import Sequelize, { Model } from 'sequelize';
+import Sequelize from 'sequelize';
 import bcrypt from 'bcryptjs';
+import Model from '../../pseudoRepository';
 
 class User extends Model {
 	static init(sequelize) {
