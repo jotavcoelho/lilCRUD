@@ -14,11 +14,14 @@ class FakeModel {
 	}
 
 	static async update(userData) {
-		const findIndex = this.users.findIndex(findUser => findUser.id === userData.id);
+		const foundIndex = this.users.findIndex(findUser => findUser.id === userData.id);
 
-		this.users[findIndex] = userData;
+		Object.assign(this.users[foundIndex], {
+			...this.users[foundIndex], 
+			userData
+		});
 
-		return this.users[findIndex];
+		return this.users[foundIndex];
 	}
 
 	static async findOne(options) {
